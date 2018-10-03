@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Right after I joined this new job.."
-date:   2018-10-03 21:22:37 +0200
-categories: rants
+date:   2018-10-01 21:22:37 +0200
+categories: rants agile scrum
 ---
 
 
