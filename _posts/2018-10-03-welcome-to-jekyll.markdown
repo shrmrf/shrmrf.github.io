@@ -1,25 +1,15 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "An intro from containers!"
 date:   2018-10-03 20:05:37 +0200
-categories: jekyll update
+categories: rants
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+I recently got the chance to explain what containers are to colleagues of mine. I could've chosen the normal path of showing off `docker run` commands, how to create a `Dockerfile` and then go about creating a Docker container. I understand that this was the common intro to containers for most people but for me, it makes Linux containers somewhat holy. I instead did a session on writing some golang code to explain what containers really are. I used `asciinema` to record the whole session and replay it at a fast speed which I screen-recorded using Kazam on Ubuntu. The presentation on the bottom-right of the screen was done using `mdp`
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Behold the vid: https://youtu.be/NK1z3095YvM
 
-Jekyll also offers powerful support for code snippets:
+... and the code: https://github.com/shrmrf/container-demo
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Although the first thing you'll note is that I didn't write a proper test. I just find it more pleasurable to go ahead with the code but a specification at the top. While presenting, I was arguing where the `syscall.SysProcAttr` configurations could be placed and forgot to actually call the `child()` function. This caused me to move into the wrong direction and I was about to reel off under pressure (remember, this was a live session). But luckily I figured out what I was doing wrong (I had actually practised the code the day before, so that might've helped.)
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Its a 7 minute video, but I think it gives you a nice idea of what goes behind-the-scenes in docker's magic.
