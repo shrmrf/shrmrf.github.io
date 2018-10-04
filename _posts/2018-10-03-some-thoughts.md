@@ -39,6 +39,6 @@ Every repo must contain:
 I'm also a big fan of having your CI/CD servers automated. Working on this, one-thing, one best-practice at a time!
 
 ### Conclusion
-This is all for today. But I have noticed that your enthusiasm for change is usually never reciprocated. Keep chugging! I have been able to achieve some of the things I mentioned above but only after loads of frustration. I still see people having long-winded discussions on email threads though. Bad habits aren't easily lost.
+This is all for today. But I have noticed that your enthusiasm for change is often never reciprocated. Keep chugging! I have been able to achieve some of the things I mentioned above but only after loads of frustration. I still see people having long-winded discussions on email threads though. Bad habits aren't easily lost.
 
-Skunkworks are healthy. I'm a proud revolutionary (for the better) from the underground. I hope I'll look back at these frustrations and be proud :)
+Skunkworks are healthy. I'm a proud revolutionary (for the better) from the underground. I hope I'll look back at these frustrations and be proud :) Get people around you that are as enthusiastic for change and march forth!
