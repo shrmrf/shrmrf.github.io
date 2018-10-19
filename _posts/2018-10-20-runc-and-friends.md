@@ -1,4 +1,3 @@
-## Kubernetes and Friends 
 Had to dig a bit into Kubernetes' friends recently. Here's a TL;DR of what's missing from the internet today:
 
 - `runc` is the **CLI tool** for running containers (create/run/delete/~~manage~~)
