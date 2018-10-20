@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "`runc` and Friends"
+title:  "runc and Friends"
 date:   2018-10-20 21:22:37 +0200
 categories: kubernetes docker
 ---
