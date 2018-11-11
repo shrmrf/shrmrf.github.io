@@ -14,9 +14,15 @@ The goal is to introduce events and derivatives of events. Why events are the _s
 
 ### Advantages of Microservices
 Explain the advantages of microservices.
+- Programming language independence
+- Scale the bottlenecks 
 
 ### Advantages of Event Triggered Architectures
 Explain the advantages of event-triggered systems.
+- Fire and forget type of architecture
+- IoT is like that
+  - Publish/Subscribe
+  - Any component can pick up the data it needs
 
 ### Final story
 I'll start with a brief overview of Microservices and event triggered systems.
