@@ -1,17 +1,18 @@
-This is a post for me to set up a new year's wishlist and track it.
+---
+layout: post
+title:  "Functional Programming"
+date:   2019-01-23 21:22:37 +0200
+categories: rants programming functional
+---
 
-- [ ] Learn Clojure: I want to learn some FP this year
-- [ ] Improve Rust: work on some internal/external tools at work
-- [ ] TSN: important in industrial applications
-- [ ] Yocto: Finally master this crap
-- [ ] ClearLinux: What I want to be working on
-- [ ] Firecracker: Get this thing running on my hardware
+So I was just reading about Functinal programming and this is a summary of what I understand about it as of today.. (might change in the future; to err after all, is human.)
 
+## Benefits
+- The "environment" you're programming against are the function arguments
+- Reuse is imminent. Composition is what everyone calls it.
+- Functions' results can be cached (memoization)
 
-Non Technical Goals
-- [ ] Exercise: get a routine in place
-- [ ] Read: Some book every month
-- [ ] Manage: manage time better
+There must be many more benefits.. These three are the ones I can think of and the ones that get the most marks from my side.
 
+## Main Concepts
 
-This list is kept to a minimum so the goals are achievable. Wish me luck!!
