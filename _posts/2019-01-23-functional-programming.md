@@ -28,7 +28,13 @@ A pure function has no side effects i.e. it depends only on its arguments.
 In this example, if the `pure-function` is really pure, then depending on the input, the return value always remains the same. This _also_ means that the `output-1` and `output-2` data are _immutable_ i.e. they're unchangable! 
 
 ### Referential Transparency
+In the example above, we might just have replaced the output of `pure-funtion` with either `output-1` or `output-2` thus avoiding the call to a function. Many languages can optimize this behavior by caching the result. It's called _memoization._ This also means that you could parallelize stuff i.e. functions can be independently evaluated on different machines/cores/nodes whatevers.
 
 ### Persistence
+Immutability is key. You never mutate. An operation on data doesn't change the data, it just returns new data. This naive approach is memory hungry I suppose but platforms and languages find ways to optimize stuff.
 
 ### Laziness
+Since I'm learning Clojure, there might be a bias because `seq` are everywhere and they're laaaaaaaaaaazy! That is, you only evaluate stuff when it's required and never before. This enables infinite length sequences. Also, we pay for operations only when required.
+
+## Conclusion
+I'm still a Functional Programming newbie but Clojure is opening my eyes! I am intrigued.
