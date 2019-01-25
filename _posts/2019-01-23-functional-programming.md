@@ -38,3 +38,5 @@ Since I'm learning Clojure, there might be a bias because `seq` are everywhere a
 
 ## Conclusion
 I'm still a Functional Programming newbie but Clojure is opening my eyes! I am intrigued.
+
+Fin!
