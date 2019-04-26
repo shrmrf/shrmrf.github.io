@@ -37,7 +37,7 @@ SERVICE_PASSWORD=$ADMIN_PASSWORD
 HOST_IP=<HOST_IP>
 
 FLOATING_RANGE=<HOST_IP>/24
-Q_FLOATING_ALLOCATION_POOL=start=<HOST_IP>.23,end=<HOST_IP>.27
+Q_FLOATING_ALLOCATION_POOL=start=<HOST_IP>.150,end=<HOST_IP>.200
 FIXED_RANGE=10.11.12.0/24
 FIXED_NETWORK_SIZE=256
 PUBLIC_INTERFACE=eno1
@@ -50,6 +50,11 @@ SWIFT_HASH=66a3d6b56c1f479c8b4e70ab5c2000f5
 SWIFT_REPLICAS=1
 SWIFT_DATA_DIR=$DEST/data
 ```
+(The `<HOST_IP>.XXX` numbers are obviously replacing the last part of the IP address.)
 
-The `<HOST_IP>.XX` numbers are obviously replacing the last part of the IP address.
+What I'm telling OpenStack is that I ...
+- already have a Gateway in the network, use it!
+- Already know what the IP allocation pool looks like
 
+### Next
+With that, hopefully you can go do OpenStack stuff and not have to worry about networking being the biggest issue in your life. Good luck!!!
