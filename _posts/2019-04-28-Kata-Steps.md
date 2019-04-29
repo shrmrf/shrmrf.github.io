@@ -36,8 +36,21 @@ Now, we're ready to build the Kernel and install it\*:
 sudo ./build-kernel.sh install
 ```
 
+### Drum Roll please
+```console
+$ docker run -it --runtime kata-runtime ubuntu bash
+root@77cf04fd8290:/# uname -r
+4.19.31-rt18
+root@77cf04fd8290:/# uname -a
+Linux 77cf04fd8290 4.19.31-rt18 #2 SMP PREEMPT RT Mon Apr 29 09:06:08 CEST 2019 x86_64 x86_64 x86_64 GNU/Linux
+root@77cf04fd8290:/# 
+```
+
+So proud!!!
+
+### Acknowledgements
 Happy Building!!
 
 Special thanks to @egernst, @rico and the great team on Slack!! Though this was my first foray into Kata Containers, I must say the folks were very welcoming. Thank you all!!
 
-\* I built the kernel (as of the time of writing) using `make build -j4` instead of using the `build-kernel.sh` script but it shouldn't matter. Just FYI.
+_\* I built the kernel (as of the time of writing) using `make build -j4` instead of using the `build-kernel.sh` script but it shouldn't matter. Just FYI._
