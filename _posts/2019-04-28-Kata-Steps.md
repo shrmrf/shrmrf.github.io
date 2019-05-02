@@ -51,8 +51,8 @@ So proud!!!
 Happy Building!!
 
 ### Note on Kernel Files
-`vmlinux`: uncompressed kernel. \n
-`vmlinuz`: compressed kernel. \n
+`vmlinux`: uncompressed kernel. |
+`vmlinuz`: compressed kernel. |
 `bzImage`: located under `arch/x86_64/boot/bzImage`. Big Zimage. Compressed kernel image.
 
 More info: https://stackoverflow.com/a/22338835/3760442
