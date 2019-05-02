@@ -55,7 +55,7 @@ Happy Building!!
 `vmlinuz`: compressed kernel. |
 `bzImage`: located under `arch/x86_64/boot/bzImage`. Big Zimage. Compressed kernel image.
 
-More info: https://stackoverflow.com/a/22338835/3760442
+More info: [https://stackoverflow.com/a/22338835/3760442](https://stackoverflow.com/a/22338835/3760442)
 
 ### Acknowledgements
 Special thanks to @egernst, @rico and the great team on Slack!! Though this was my first foray into Kata Containers, I must say the folks were very welcoming. Thank you all!!
