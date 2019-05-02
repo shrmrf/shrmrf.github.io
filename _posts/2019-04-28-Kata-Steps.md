@@ -48,9 +48,16 @@ root@77cf04fd8290:/#
 
 So proud!!!
 
-### Acknowledgements
 Happy Building!!
 
+### Note on Kernel Files
+`vmlinux`: uncompressed kernel. \n
+`vmlinuz`: compressed kernel. \n
+`bzImage`: located under `arch/x86_64/boot/bzImage`. Big Zimage. Compressed kernel image.
+
+More info: https://stackoverflow.com/a/22338835/3760442
+
+### Acknowledgements
 Special thanks to @egernst, @rico and the great team on Slack!! Though this was my first foray into Kata Containers, I must say the folks were very welcoming. Thank you all!!
 
 _\* I built the kernel (as of the time of writing) using `make build -j4` instead of using the `build-kernel.sh` script but it shouldn't matter. Just FYI._
