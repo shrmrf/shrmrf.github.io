@@ -7,6 +7,12 @@ categories: rants kata-containers k8s linux
 
 _Annotations are a great feature in Kubernetes and a means for communicating to kata some options. [They are being documented as of the time of this writing](https://github.com/kata-containers/documentation/issues/486)_
 
+Using annotations, you can:
+- Customize the Kernel that is used (see `KernelPath` example below) 
+- Change the guest image (`ImagePath`)
+- Hypervisor (`HypervisorPath`)
+- Firmware (`FirmwarePath`)
+- etc. etc. (All of the annotations are listed in [`annotations.go`](https://github.com/kata-containers/runtime/blob/master/virtcontainers/pkg/annotations/annotations.go))
 ### Using a Custom Kernel
 Here is the `yaml` file I used to apply a custom kernel:
 
