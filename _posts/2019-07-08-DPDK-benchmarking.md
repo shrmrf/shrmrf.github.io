@@ -143,10 +143,10 @@ guestfish --rw --add ../debian-10.0.0-openstack-amd64.qcow2 --mount /dev/sda1:/ 
 And make 2 copies of the `debian-10.0.1-20190708-openstack-amd64.qcow2` file. We'll use it as our hard drives for guests.
 
 #### Some resources to read
-File-sharing: https://www.linux-kvm.org/page/9p_virtio
-OVS+KVM: https://docs.paloaltonetworks.com/vm-series/8-1/vm-series-deployment/set-up-the-vm-series-firewall-on-kvm/performance-tuning-of-the-vm-series-for-kvm/enable-open-vswitch-on-kvm.html#
-Using `testpmd` to test DPDK Performance: https://software.intel.com/en-us/articles/testing-dpdk-performance-and-features-with-testpmd
-Vhost/Virtio in DPDK: https://software.intel.com/en-us/articles/configuration-and-performance-of-vhost-virtio-in-data-plane-development-kit-dpdk
+File-sharing: `https://www.linux-kvm.org/page/9p_virtio`
+OVS+KVM: `https://docs.paloaltonetworks.com/vm-series/8-1/vm-series-deployment/set-up-the-vm-series-firewall-on-kvm/performance-tuning-of-the-vm-series-for-kvm/enable-open-vswitch-on-kvm.html#`
+Using `testpmd` to test DPDK Performance: `https://software.intel.com/en-us/articles/testing-dpdk-performance-and-features-with-testpmd`
+Vhost/Virtio in DPDK: `https://software.intel.com/en-us/articles/configuration-and-performance-of-vhost-virtio-in-data-plane-development-kit-dpdk`
 
 ### Launching the Guests
 I launched the guests in two separate terminal windows (i.e., copy-paste instead of executing).
