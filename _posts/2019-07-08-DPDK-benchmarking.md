@@ -101,4 +101,62 @@ c3459670-39b8-43f7-bc57-569672ed79c6
     ovs_version: "2.9.2"
 ```
 
-_To be continued_
+### Binding Devices to DPDK
+_We should check [whether the NIC is compatible](https://core.dpdk.org/supported/) with DPDK first. The [list](https://core.dpdk.org/supported/) on DPDK doesn't seem to have been updated e.g. the [documentation itself for newer versions](https://doc.dpdk.org/guides-18.11/nics/igb.html?highlight=i210#supported-chipsets-and-nics) states that the I210 is supported._
+
+```bash
+sudo modprobe vfio-pci
+sudo dpdk-devbind --bind=vfio-pci eno1 # eno1 is the interface I want to bind to DPDK
+```
+
+`dpdk-devbind --status` can be used to check whether the NIC is now using the DPDK compatible driver.
+```console
+root@machine:~# dpdk-devbind --status
+
+Network devices using DPDK-compatible driver
+============================================
+0000:00:19.0 'Ethernet Connection I217-V 153b' drv=vfio-pci unused=e1000e
+
+Network devices using kernel driver
+===================================
+0000:02:00.0 'Killer E220x Gigabit Ethernet Controller e091' if=enp2s0 drv=alx unused=vfio-pci *Active*
+
+    ...
+```
+## VMs Quick Start
+[Download Debian 10 (buster)](https://cdimage.debian.org/cdimage/openstack/current/debian-10.0.1-20190708-openstack-amd64.qcow2) and change the password for `root` using `guestfish`. (Debian was an arbitrary choice here.)
+
+Add anything to the images at this point. I downloaded `qperf` with all it's dependencies and added it:
+```bash
+apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests \
+  --no-conflicts --no-breaks --no-replaces --no-enhances \
+  --no-pre-depends ${PACKAGES} | grep "^\w")
+
+virt-copy-in -a ./debian-10.0.0-openstack-amd64-2.qcow2  *.deb  /home/
+```
+
+`openssl passwd -1 <password>` can be used to generate a password entry, and this can be added to the guest image using:
+```bash
+guestfish --rw --add ../debian-10.0.0-openstack-amd64.qcow2 --mount /dev/sda1:/ vi /etc/shadow
+```
+
+And make 2 copies of the `debian-10.0.1-20190708-openstack-amd64.qcow2` file. We'll use it as our hard drives for guests.
+
+#### Some resources to read
+File-sharing: https://www.linux-kvm.org/page/9p_virtio
+OVS+KVM: https://docs.paloaltonetworks.com/vm-series/8-1/vm-series-deployment/set-up-the-vm-series-firewall-on-kvm/performance-tuning-of-the-vm-series-for-kvm/enable-open-vswitch-on-kvm.html#
+Using `testpmd` to test DPDK Performance: https://software.intel.com/en-us/articles/testing-dpdk-performance-and-features-with-testpmd
+Vhost/Virtio in DPDK: https://software.intel.com/en-us/articles/configuration-and-performance-of-vhost-virtio-in-data-plane-development-kit-dpdk
+
+### Launching the Guests
+I launched the guests in two separate terminal windows (i.e., copy-paste instead of executing).
+```console
+root@machine:~# cat ./launch-os.sh 
+# Launch OS1
+qemu-system-x86_64 -m 1024 -smp 4 -cpu host -hda ./debian-10.0.0-openstack-amd64.qcow2 -boot c -enable-kvm -no-reboot -net none -nographic -chardev socket,id=char1,path=/run/openvswitch/vhost-user1 -netdev type=vhost-user,id=mynet1,chardev=char1,vhostforce -device virtio-net-pci,mac=00:00:00:00:00:01,netdev=mynet1 -object memory-backend-file,id=mem,size=1G,mem-path=/dev/hugepages,share=on -numa node,memdev=mem -mem-prealloc
+
+# Launch OS2
+qemu-system-x86_64 -m 1024 -smp 4 -cpu host -hda ./debian-10.0.0-openstack-amd64-2.qcow2 -boot c -enable-kvm -no-reboot -net none -nographic -chardev socket,id=char2,path=/run/openvswitch/vhost-user2 -netdev type=vhost-user,id=mynet2,chardev=char2,vhostforce -device virtio-net-pci,mac=00:00:00:00:00:02,netdev=mynet2 -object memory-backend-file,id=mem,size=1G,mem-path=/dev/hugepages,share=on -numa node,memdev=mem -mem-prealloc -fsdev local,security_model=passthrough,id=fsdev0,path=/tmp/share -device virtio-9p-pci,id=fs0,fsdev=fsdev0,mount_tag=hostshare
+```
+
+Godspeed!
