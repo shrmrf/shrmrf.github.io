@@ -128,6 +128,7 @@ Network devices using kernel driver
 
 Add anything to the images at this point. I downloaded `qperf` with all it's dependencies and added it:
 ```bash
+PACKAGES="qperf iperf"
 apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests \
   --no-conflicts --no-breaks --no-replaces --no-enhances \
   --no-pre-depends ${PACKAGES} | grep "^\w")
