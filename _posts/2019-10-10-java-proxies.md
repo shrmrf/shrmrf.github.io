@@ -13,8 +13,8 @@ Clojurescript is written in Clojure which requires Java. So we need to get all t
 #### Java
 To get Java JDK and JRE, run:
 ```console
-sudo apt install openjdk-11-jre
-sudo apt install openjdk-11-jdk
+$ sudo apt install openjdk-11-jre
+$ sudo apt install openjdk-11-jdk
 ```
 
 For proxy settings, edit `/etc/java-11-openjdk/net.properties`.
