@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Getting Started with Clojure[script] Behind Corporate Proxy"
-date:   2019-09-22 21:22:37 +0200
+date:   2019-10-14 21:22:37 +0200
 categories: rants architecture DDD
 ---
 
@@ -64,3 +64,19 @@ $ sudo ./linux-install-1.10.1.469.sh
 ```
 
 Using the command `clj` launches the repl. Thankfully!
+
+#### Leiningen
+Follow the steps on https://leiningen.org/
+
+```console
+curl -O "https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein"
+chmod a+x lein
+mv lein ~/bin/
+```
+
+### Create a Test Project
+To test `lein` and `figwheel`+`reagent`:
+
+```console
+$ lein new figwheel some-name -- --reagent
+```
