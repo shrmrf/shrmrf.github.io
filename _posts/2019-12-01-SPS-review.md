@@ -1,82 +1,55 @@
 ---
 layout: post
-title:  "Getting Started with Clojure[script] Behind Corporate Proxy"
+title:  "Answering Questions on SPS 2019 Demo"
 date:   2019-10-14 21:22:37 +0200
-categories: rants architecture DDD
+categories: rants architecture SPS
 ---
 
-So on my Clojurescript journey, the first roadblock I hit was corporate proxy. I don't know why Java, maven, clojure (everybody?) doesn't respect the environment variables but this is a real pain.
+SPS Nuremberg is one of the largest gatherings of the Industry. This year was no different.
 
-### Getting started
-Clojurescript is written in Clojure which requires Java. So we need to get all three up and running.
+I was part of a team that presented the concept of OT/IT consolidation. I got quite a few comments and questions about the [demo video (in Urdu here)](https://www.facebook.com/ziakhan/videos/10156612828352623/). So here's a shot at answering some of the questions I got forwarded:
 
-#### Java
-To get Java JDK and JRE, run:
-```console
-$ sudo apt install openjdk-11-jre
-$ sudo apt install openjdk-11-jdk
-```
+The demo was (in oversimplified terms) showing PLC compute moved to software which can be orchestrated using Kubernetes.
 
-For proxy settings, edit `/etc/java-11-openjdk/net.properties`.
+**Q/A**\
+_Nice move.  But how sensor data is being processed without PLC or a microcontroller?_\
+There are "dumb" IO devices connected over Profinet in this case (but it can really be any fieldbus e.g. Ethercat etc.)
 
-Example for `http` proxy in the file:
-```ini
-http.proxyHost="proxy-addr.company.com"
-http.proxyPort=8080
-http.nonProxyHosts=localhost|127.*|[::1]
-```
+Some people had a comment about ADCs being involved. YES, but we need to think at a higher level in this case. Analog and Digital IOs are obviously involved under-the-hood.
 
-#### Maven
-This was the hardest to figure out. And it's crazy (coming from a newbie perspective) that maven doesn't make it easy to just reuse Java or System proxies or respect the `http_proxy` variable. Madness. Moreover, you _need_ to create the configuration file at `~/.m2/settings.xml` with the following contents:
 
-```xml
-<settings>
-<proxies>
-    <proxy>
-        <id>httpproxy</id>
-        <active>true</active>
-        <protocol>http</protocol>
-        <host>proxy-addr.company.com</host>
-        <port>8080</port>
-        <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
-    </proxy>
-    <proxy>
-        <id>httpsproxy</id>
-        <active>true</active>
-        <protocol>https</protocol>
-        <host>proxy-addr.company.com</host>
-        <port>8080</port>
-        <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
-    </proxy>
-</proxies>
-</settings>
-```
+_So what is difference between an arduino microcontroller and program able logical controller_\
+This is a strange question. Arduino is not a microcontroller, it's a prototyping platform (and a company as well.) This prototyping platform _has_ a microcontroller. A PLC is a digital computer made for the industry. Follows many industrial IEC standards. It is a part of many things. For our demo, we were using ADAM PLCs from Advantech.
 
-#### Clojure
-_make sure `rlwrap` is installed (`sudo apt install rlwrap`)_
+Arduino can also be programmed to become a PLC (see the OpenPLC project: https://www.openplcproject.com/)
 
-Download and install clojure using the following commands:
+_Ok good step so what precautions u take if ur factory text file or source code get hack??_\
+If you get hacked, "precautions" are irrelevant. The word precaution means that it ought to prevent the hack. I'm assuming this was the question as well. Although this was not a security demo, but k8s brings with it good security practices (certs, https etc.). "Hack" is too open-ended of a word.
 
-```console
-$ curl -O https://download.clojure.org/install/linux-install-1.10.1.469.sh  # This is the current version as of writing
-$ chmod +x linux-install-1.10.1.469.sh
-$ sudo ./linux-install-1.10.1.469.sh
-```
+_So can we apply machine learning and Ai codes in PLC??_\
+I would read my answer above and conclude: NO. PLCs are meant for other things, Google is your friend!
 
-Using the command `clj` launches the repl. Thankfully!
+_We get machine learning codes in Python mostly some standard c language so what u suggest??_\
+Great attempt at moving off-topic! (Always one person in the team!!)
 
-#### Leiningen
-Follow the steps on https://leiningen.org/
+_Using structure text and block diagrams and ladder diagrams??_\
+Yup
 
-```console
-curl -O "https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein"
-chmod a+x lein
-mv lein ~/bin/
-```
+_One more thing can u tell me PLC have a capability of processing i mean controller and processor r 2 different things so can u guide me ?_\
+They are computers in the end! The scope of their work is a bit limited to their application. Check out the OpenPLC project I linked to above.
 
-### Create a Test Project
-To test `lein` and `figwheel`+`reagent`:
+_No. That is why I am designing machines and control systems using hybrid model. Means using PLCs, Microcontrollers and Computers to accomplish
+ all kind of customization which include AI and custom GUIs in python and VueJs_\
+Interesting... But we should not convolute so many things in one sentence. Everything you mentioned has its place. And they work together. We ought to avoid the use of the words "Hybrid Model" which sounds like formalism.
 
-```console
-$ lein new figwheel some-name -- --reagent
-```
+_Recently I have designed Pakistan's first industrial Artificially intelligent sorting robotic conveyor using this hybrid model._
+Tall claims!! I saw the video and one comment for now is that it might not meet some safety standards we have in the EU and US. Best of luck my friend!! Bring us laurels.
+
+Also, I would tone down on Artificial intelligence and use specifics when talking to more technical folk (e.g. Computer Vision, OpenVINO, Inference, Learning etc.)
+
+_So its coslty???_
+Yes, it's supposed to run for many years so, there's a lot of hardening.
+
+
+**Conclusion**\
+I'm surprised by the interest people showed in the project. It's still a concept and we want to work with the Industry leaders to bring about more mature products.
