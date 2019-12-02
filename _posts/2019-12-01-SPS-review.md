@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Answering Questions on SPS 2019 Demo"
-date:   2019-10-14 21:22:37 +0200
+date:   2019-12-01 21:22:37 +0200
 categories: rants architecture SPS
 ---
 
