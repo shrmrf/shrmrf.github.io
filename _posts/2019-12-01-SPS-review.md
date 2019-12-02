@@ -30,6 +30,8 @@ Arduino can also be programmed to become a PLC (see the OpenPLC project: https:/
 
 If you get hacked, "precautions" are irrelevant. The word precaution means that it ought to prevent the hack. I'm assuming this was the question as well. Although this was not a security demo, but k8s brings with it good security practices (certs, https etc.). "Hack" is too open-ended of a word.
 
+Security practices are a whole different topic. Perhaps not relevant for the discussion here.
+
 - _So can we apply machine learning and Ai codes in PLC??_
 
 I would read my answer above and conclude: NO. PLCs are meant for other things, Google is your friend!
