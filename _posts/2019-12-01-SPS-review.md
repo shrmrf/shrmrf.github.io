@@ -24,7 +24,7 @@ Some people had a comment about ADCs being involved. YES, but we need to think a
 
 This is a strange question. Arduino is not a microcontroller, it's a prototyping platform (and a company as well.) This prototyping platform _has_ a microcontroller. A PLC is a digital computer made for the industry. Follows many industrial IEC standards. It is a part of many things. For our demo, we were using ADAM PLCs from Advantech.
 
-Arduino can also be programmed to become a PLC (see the OpenPLC project: https://www.openplcproject.com/)
+Arduino can also be programmed to become a PLC (see the OpenPLC project: [https://www.openplcproject.com/](https://www.openplcproject.com/))
 
 - _Ok good step so what precautions u take if ur factory text file or source code get hack??_
 
