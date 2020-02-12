@@ -27,7 +27,11 @@ Before proceeding, I'd suggest uninstalling `pip` using `pip uninstall pip` and 
 [Using the `pyenv` installer project](https://github.com/pyenv/pyenv-installer)
 
 ```console
-$ sudo apt install libssl-dev libsqlite-dev libreadline-dev libbz2-dev    # I've observed failures without these libs
+$ sudo apt install libssl-dev \
+                   libsqlite-dev \
+                   libreadline-dev \
+                   libbz2-dev  \
+                   libsqlite3-dev  # I've observed failures without these libs
 $ curl https://pyenv.run | bash
 ...
 WARNING: seems you still have not added 'pyenv' to the load path.
@@ -44,14 +48,16 @@ This should set up `pyenv` for you. Read the instructions printed at the end and
 
 ## Usage (summarized)
 
-Install Python 3.8.1:
+Example: Install Python 3.8.1:
 
 ```console
 $ pyenv install 3.8.1
 ```
 
+P.S: Tab completion works!
+
 ### Virtualenv
 Create a virtualenv
 ```console
-pyenv virtualenv
+$ pyenv virtualenv
 ```
