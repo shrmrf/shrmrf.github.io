@@ -54,10 +54,18 @@ Example: Install Python 3.8.1:
 $ pyenv install 3.8.1
 ```
 
-P.S: Tab completion works!
+P.S: logout and log back in
+P.S2: Tab completion works!
 
 ### Virtualenv
 Create a virtualenv
 ```console
-$ pyenv virtualenv
+$ pyenv virtualenv 3.8.1 venv3.8    # create a virtualenv called venv3.8 based on python 3.8.1
+$ pyenv activate venv3.8    # activate venv3.8
+$ python --version
+Python 3.8.1
+$ which python
+/home/taimoor/.pyenv/shims/python
 ```
+
+That's it! Now you can manage your anaconda and python environments, versions sooo much better.
