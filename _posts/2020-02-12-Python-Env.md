@@ -54,7 +54,8 @@ Example: Install Python 3.8.1:
 $ pyenv install 3.8.1
 ```
 
-P.S: logout and log back in \
+P.S: logout and log back in
+
 P.S2: Tab completion works!
 
 ### Virtualenv
