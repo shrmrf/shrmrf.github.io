@@ -26,15 +26,19 @@ Although designed for the web, WebAssembly is able to run portably across archit
 What needs to be determined IMO is:
 
 - Realtime capabilities
+
     Can WebAssembly modules written in C/C++ provide any RT capabilities? If so, then it'll be interesting to evaluate whether a WebAssembly runtime is all that a PLC should be. Apps running the PLC would be delivered like software. Less stickiness for everybody.
 
 - Recompile all the things
+
     Can WebAssembly runtimes replace native programs? How about message queues, brokers implemented in WebAssembly? I know it's not possible to compile all complicated software to WebAssembly today - but is that the future too?
 
 - UI
+
     Will Slack and it's likes re-implement significant portions of their code to WebAssembly? Should work, right?
 
 - Edge
+
     Fastly has already done lots of work with their CDN running WebAssembly-isolated workloads. Can we bring this down to the Edge where we're running containers today?
 
 
