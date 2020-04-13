@@ -34,3 +34,7 @@ fn main() {
     println!("again, first two: {:?}", first_two);  // first_two is referred
 }
 ```
+
+The main takeaways from the above two examples is:
+- _the lifetime of values should outlive any of it's references_
+- _a reference's lifetime must be completely contained within the lifetime of the value being referenced_
