@@ -69,3 +69,11 @@ fn simulate_game<'a>(home: &'a str, away: &'a str) -> &'a str {
 }
 ```
 This syntax expresses intent in signature
+
+**Lifetime Elision:**
+
+Lifetimes are a part of the language but the language can create some common lifetimes so we don't have to specify them all the time in our programs. This is called Lifetime Elision. The three rules of elided lifetimes:
+
+- Each parameter gets its own lifetime
+- One lifetime in parameters => return
+- Self reference's lifetime => return
