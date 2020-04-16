@@ -38,3 +38,21 @@ fn main() {
 The main takeaways from the above two examples is:
 - _the lifetime of values should outlive any of it's references_
 - _a reference's lifetime must be completely contained within the lifetime of the value being referenced_
+
+
+Generic Lifetimes:
+
+_the following won't compile_
+
+```rust
+extern crate rand;
+fn simulate_game(home: &str, away: &str) -> &str {
+    if rand::random() {
+        home
+    } else {
+        away
+    }
+}
+```
+
+Rust can not know the lifetime of the return value. It knows that return is valid when _both_ references are valid!!
