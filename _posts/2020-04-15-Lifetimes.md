@@ -56,3 +56,16 @@ fn simulate_game(home: &str, away: &str) -> &str {
 ```
 
 Rust can not know the lifetime of the return value. It knows that return is valid when _both_ references are valid!!
+
+Adding a generic lifetime param:
+```rust
+extern crate rand;
+fn simulate_game<'a>(home: &'a str, away: &'a str) -> &'a str {
+    if rand::random() {
+        home
+    } else {
+        away
+    }
+}
+```
+This syntax expresses intent in signature
