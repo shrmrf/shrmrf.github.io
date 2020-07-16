@@ -16,3 +16,6 @@ I use Vim a lot. And if you're a productive user of Vim, you will definitely app
 I found [`dconf/org/gnome/desktop/input-sources/xkb-options`](https://wiki.gnome.org/Projects/dconf) to be a much more solid solution.
 
 Under `xkb-options` you can put a "Custom value" like: `['caps:swapescape']` (note: syntax is important!!)
+
+#### Windows Note
+By far the best and most reliable key remapper on Windows is [sharpkeys (`randyrants/sharpkeys`)](https://github.com/randyrants/sharpkeys).
