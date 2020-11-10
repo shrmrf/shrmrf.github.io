@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "VM Optimizations for RT"
-date:   2020-06-14 21:22:37 +0200
+date:   2020-11-10 21:22:37 +0200
 categories: openstack qemu kvm k8s
 ---
 
@@ -22,7 +22,7 @@ QEMU/KVM are a popular backend for OpenStack. In StarlingX Openstack (`stx-opens
 _Note: I borrowed terminology heavily from [this article on `null-src`](https://null-src.com/posts/qemu-optimization/post.php)_
 
 ### Isolating CPUs
-[My last article covers this topic](/_posts/2020-11-09-STX-for-RT.md). Isolating a VM's vCPU threads from the host system ensures that host's processes don't interfere with the VM.
+[My last article covers this topic](https://shrmrf.github.io/rants/stx/2020/11/09/STX-for-RT.html). Isolating a VM's vCPU threads from the host system ensures that host's processes don't interfere with the VM.
 
 
 ### Scheduling Openstack VMs on isolated cores
