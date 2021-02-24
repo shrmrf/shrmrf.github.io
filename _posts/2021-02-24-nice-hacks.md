@@ -13,7 +13,7 @@ Routing everything through corporate network is also a cause of load on the comp
 
 ## Use `vpn-slice`
 
-`vpn-slice` is an awesome tool that allows you to use the VPN for only a certain few websites. I used `vpn-slice` along with `openconnect`.
+[`vpn-slice`](https://github.com/dlenski/vpn-slice) is an awesome tool that allows you to use the VPN for only a certain few websites. I used `vpn-slice` along with `openconnect`.
 
 Installation is pretty straightforward if you follow the documentation. Just make sure the `root` user sees the binary. I installed `pyenv` seperately for the `root` user and configured the global python env to be 3.9.2 (`pyenv global 3.9.2`).
 
