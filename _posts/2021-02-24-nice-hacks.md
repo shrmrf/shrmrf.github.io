@@ -29,8 +29,8 @@ $ pip install vpn-slice
 ## Usage with `openconnect`
 ```console
 $ openconnect \
-  -c <path-to-certs>
-  -k <path-to-private-key>
+  -c <path-to-certs> \
+  -k <path-to-private-key> \
   -s 'vpn-slice 10.0.0.0/8 outlook.example.com intra.example.com gitlab.example.com login.microsoftonline.com teams.microsoft.com microsoftstreams.com' \
   vpn.example.com
 ```
