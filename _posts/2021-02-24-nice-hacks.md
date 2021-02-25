@@ -7,6 +7,8 @@ categories: lifehack vpn linux
 
 _Linux only_
 
+_DISCLAIMER: THE FOLLOWING CAN LEAD TO CREATING SECURITY HOLES IN THE VPN-PROTECTED NETWORK... BE VERY CAREFUL. MAKE SURE YOU KNOW WHAT YOU'RE DOING. IF YOU DON'T UNDERSTAND WHAT YOU'RE DOING, **DO NOT PROCEED**_
+
 VPNs are a pain in the neck. I managed to find a way to have VPN traffic limited to some sites instead of routing everything through your corporate network.
 
 Routing everything through corporate network is also a cause of load on the company's servers. Imagine a ton of people watching Youtube over VPN. Now, I'm talking about traditional VPN here, not p2p stuff.
