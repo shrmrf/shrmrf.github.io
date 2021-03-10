@@ -29,10 +29,14 @@ $ pip install vpn-slice
 ```
 
 ## Usage with `openconnect`
-```console
-$ openconnect \
-  -c <path-to-certs> \
-  -k <path-to-private-key> \
-  -s 'vpn-slice 10.0.0.0/8 outlook.example.com intra.example.com gitlab.example.com login.microsoftonline.com teams.microsoft.com microsoftstreams.com' \
-  vpn.example.com
+```bash
+# Source: https://docs.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#skype-for-business-online-and-microsoft-teams
+MSFT="teams.microsoft.com login.microsoftonline.com microsoftstreams.com 13.107.64.0/18, 52.112.0.0/14, 52.120.0.0/14"
+MYCOMPANY=""  # Your company's domains, IP addr etc.
+
+openconnect \
+  -c /home/taimoor/.cert/CERT.crt \
+  -k /home/taimoor/.cert/private.key --key-password-from-fsid \
+  -s "vpn-slice $MSFT $MYCOMPANY" \
+  vpn.intel.com
 ```
