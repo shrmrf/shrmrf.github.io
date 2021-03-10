@@ -38,5 +38,5 @@ openconnect \
   -c /home/taimoor/.cert/CERT.crt \
   -k /home/taimoor/.cert/private.key --key-password-from-fsid \
   -s "vpn-slice $MSFT $MYCOMPANY" \
-  vpn.intel.com
+  vpn.company.com
 ```
