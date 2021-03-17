@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hey there!! I'm [Taimoor](https://about.me/taimoori). I go by `@ich_code` on Twitter, `shrmrf` on Github and `sysarcher` on various places. Why KISS?
+Hey there!! I'm [Taimoor](https://about.me/taimoori). I go by `@ich_code` on Twitter, `sysarcher` on Github and various places. Why KISS?
 
 You'll find my CV here soon. (Todo: Add link, I haven't added a link because right now, there's too much info on the CV i.e. phone number etc.)
 
