@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Some nice Hacks"
+title:  "RegEx Search for Youtube Ads"
 date:   2021-02-24 21:22:37 +0200
 categories: lifehack pihole regex
 ---
