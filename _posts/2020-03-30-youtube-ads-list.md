@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "RegEx Search for Youtube Ads"
-date:   2021-02-24 21:22:37 +0200
+date:   2021-03-30 21:22:37 +0200
 categories: lifehack pihole regex
 ---
 
