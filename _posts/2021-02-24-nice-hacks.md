@@ -35,8 +35,8 @@ MSFT="teams.microsoft.com login.microsoftonline.com microsoftstreams.com 13.107.
 MYCOMPANY=""  # Your company's domains, IP addr etc.
 
 openconnect \
-  -c /home/taimoor/.cert/CERT.crt \
-  -k /home/taimoor/.cert/private.key --key-password-from-fsid \
+  -c /home/$USER/.cert/CERT.crt \
+  -k /home/$USER/.cert/private.key --key-password-from-fsid \
   -s "vpn-slice $MSFT $MYCOMPANY" \
   vpn.company.com
 ```
