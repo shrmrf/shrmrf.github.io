@@ -4,6 +4,9 @@ title:  "RegEx Search for Youtube Ads"
 date:   2021-03-30 21:22:37 +0200
 categories: lifehack pihole regex
 ---
+_Strategy:_ What I'm doing is unblock/whitelist any domain that causes video playback issues.
+
+_(Credits for the original list @beshrkayali)_
 
 I have started to add to a blacklist here:
 
