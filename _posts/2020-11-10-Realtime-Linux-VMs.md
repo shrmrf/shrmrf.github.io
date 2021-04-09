@@ -32,3 +32,8 @@ _Note: I borrowed terminology heavily from [this article on `null-src`](https://
 #### using `taskset`
 
 ### Linux Process Scheduler Tuning
+
+### GRUB cmdline
+```
+GRUB_CMDLINE_LINUX_DEFAULT="maybe-ubiquity threadirqs rcu_nocbs=1 rcu_nocb_poll isolcpus=1 nohz_full=1 nohz=off intel_pstate=disable nosoftlockup nohalt console=tty0 console=ttyS0,115200"
+```
