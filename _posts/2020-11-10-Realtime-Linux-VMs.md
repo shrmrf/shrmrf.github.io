@@ -34,6 +34,7 @@ _Note: I borrowed terminology heavily from [this article on `null-src`](https://
 ### Linux Process Scheduler Tuning
 
 ### GRUB cmdline
+Okay... don't delete the `console` entries in your command line... the entries below are for isolated cpu 1. This is not a comprehensive list... Just append whatever makes sense to you.
 ```
-GRUB_CMDLINE_LINUX_DEFAULT="threadirqs rcu_nocbs=1 rcu_nocb_poll isolcpus=1 nohz_full=1 nohz=off intel_pstate=disable nosoftlockup nohalt console=tty0 console=ttyS0,115200"
+GRUB_CMDLINE_LINUX_DEFAULT="threadirqs rcu_nocbs=1 rcu_nocb_poll isolcpus=1 nohz_full=1 nohz=off intel_pstate=disable nosoftlockup nohalt"
 ```
