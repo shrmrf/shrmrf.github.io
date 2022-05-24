@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/sysarcher
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.sysarcher.me
+  * I am sysarcher (https://keybase.io/sysarcher) on keybase.
+  * I have a public key with fingerprint 9370 712D 478E 5246 83AD  00CD 62B6 F20E 5D35 9984
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120dca76db558e45142eb3085e8a21b5fbf0ce282eccc83d907287ec0a91c17ffa10a",
+      "fingerprint": "9370712d478e524683ad00cd62b6f20e5d359984",
+      "host": "keybase.io",
+      "key_id": "62b6f20e5d359984",
+      "kid": "0101afc6b475d0ef335186aa44574b4e1c2df7db141b48e297eb338e7ebe7f1051220a",
+      "uid": "93fdab52c3b27e52a9ec297834f51219",
+      "username": "sysarcher"
+    },
+    "service": {
+      "hostname": "blog.sysarcher.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1653400036,
+  "expire_in": 157680000,
+  "prev": "52c0d39f22a641f16371fa1cf5d745b82f68742a0a25f1095c81391dee3613d9",
+  "seqno": 72,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMNtAnicbVJtUFRVGN41KNnUoBI0BfXaF0l4z/2+iJmTfAY0gCMV4nrvuefCDdi7
+7S4LjAtSYkGBTpADlOyQNWUxBtrQQMWQyqdEH5LooNU0gYQ4UyiKiUjnMtqvfr1z
+3vM8z3me9z2di+8xWczyl1eWZLB1peb+4948k1zx+8guQtaVQiJiF5GN5gvKUZDT
+Zc3WFCKCIAFFKlDiOUVmWQExLGAoJNOkwCJBooDMqrJKQkQJFIIQCrQikjwl8AiS
+kggg4FVVAqREhBGqZstEDrtDs7mwrEjzJA8oheEFxFIMJ9CSQpJQ4SiZUykSsQrN
+iqLAYGKW7jQY2JwsOVG4puMePljn7f0P/q5vEkgq5GSGZxUSqTTNAoGTJIZheUZm
+EICUovKKDBggMwKiRB6nogWEC+JVQLKAouZ9583LibSqSDJLQVqmeOxYEhHEHIFm
+VIwEogF0IodNykUY7Sx0Sg6YhRxEURiB224NImOyRpQ7EDlHzwz/DxeOe2GE3aG7
+dKjn4Ossl8vujDDorkK7gc9HsvWOklXWbAqeJma4kcOp6TYiAmAkdGmGNOBYmiFJ
+kubCCFRg1xzIqhkIlucE3CaNd5AbS+I0pEKLKkVJHANUwNE8wNuCKqvwDCsLlMoJ
+PENJpESxeCIiCwVAi0BBiOYAXjRhZHvVphMRPIV9SplGci3TJrnyHIgoOnF8u4/J
+bDHd67vA+GYmi5//3c8XP/jAnH6sen1b1Ua/s9fGsh8pakALutP4EuGrIG/F8Kny
+zU/eV+tN9Zvpz0+NTWwo3ra6bGnfmLd0HVGvTSQUxBLfr1m4u3jg5GXlr+fdZYkn
+TLEPHYvPPWUJyPCr6vl8ICXu8OvnLpO9k/FS4N5h/W0wFfxma65t25XmmEtR9SUt
+dcW1f45pcdf3VNbFsFef/buZtr5oCT8w9aHPH1uCGmo85oGLt5ffKIdHDu2slZuf
+OdhV7VO2r97TVR7j6Ya/NV24+kN0SOit0PtNtWZnH5v81LLOoZGnhdd26OPVjuQy
+raax+OgH/9xO96lpyY4zZzy8dmLL7oGksRBm9qX6HwfaJnIuTo+UDtqYteeS22d6
+EarsvdCl2D0LGx5fOpTRFwUAnGoK0eaaZ7tWLfv1tDvNb+v1IymTnYclbnz42oYV
+4+IbTSt/vklHpQcsDmyjpV+meypOR7ZfWkVH739vrr9s5+rI0TMvg+DlCUxitXND
+wlTHFz3e2fxNH7f89EIv+ZGnPKjyrfMxSa5F5LfP+aKs9TeTHn3M9sShdyfpFetW
+eof2nzngCajSdwRCf/O0zTnXW5PeGObzTurUdx3QFL3RvflgeWd36zdrYm81FtS9
+37po34PRZ0N921LStnOmr5eMD57kVP+iG59ZcjcRo1sTImNaleBPXmlHpgoLIVIl
+o3s/PTpTEX++Y+Rf0pDBcQ==
+=kUKV
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sysarcher
+
+==================================================================
